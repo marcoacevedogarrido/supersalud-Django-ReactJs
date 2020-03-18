@@ -1,5 +1,7 @@
 <template>
+<b-card>
     <paper-table></paper-table>
+</b-card>
 </template>
 
 <script>

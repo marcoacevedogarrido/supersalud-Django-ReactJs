@@ -19,7 +19,7 @@ from rest_framework import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('base.urls')),
+    path('', include('server.urls')),
     path('api/', include('rest_auth.urls')),
-    path('api/registro', include('rest_auth.registration.urls'))
+    path('api/register/', include('rest_auth.registration.urls'))
 ]

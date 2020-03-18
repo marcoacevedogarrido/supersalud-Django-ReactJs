@@ -1,16 +1,15 @@
 <template>
-  <div class='container'>
-    <h2>Tabla Apiux</h2>
-    <table id='Table' class="table table-striped table-bordered table-hover text-center">
-       <thead class="thead-dark">
+<card>
+  <div slot="raw-content" class="table-responsive">
+    <table id='Table' class="table table-striped text-center" :class="tableClass">
+       <thead>
          <tr>
-           <th>Id</th>
-           <th>Nombre</th>
-           <th>Apellido Paterno</th>
-           <th>Apellido Materno</th>
-           <th>fecha de Nacimiento</th>
-           <th>Telefono</th>
-           <th>rut</th>
+           <td><strong>Nombre</strong></td>
+           <td><strong>Apellido Paterno</strong></td>
+           <td><strong>Apellido Materno</strong></td>
+           <td><strong>fecha de Nacimiento</strong></td>
+           <td><strong>Telefono</strong></td>
+           <td><strong>rut</strong></td>
          </tr>
        </thead>
        <tbody>
@@ -37,12 +36,13 @@
        </tbody>
     </table>
   </div>
+</card>
 </template>
 
 <script>
 import axios from 'axios'
 
-const Listarpath = 'http://localhost:8000/api/afectados/'
+const Listarpath = 'http://127.0.0.1:8000/api/afectados/'
 
 export default {
   name: 'paper-table',
