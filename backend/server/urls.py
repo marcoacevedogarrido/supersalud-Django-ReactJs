@@ -29,7 +29,6 @@ from server.api.reparos import ReparoView
 from server.api.intendencias import IntendenciaView
 from server.api.materias import MateriaView
 from server.api.submaterias import SubmateriaView
-from server.api.servicios import ServicioTaskView
 
 router = routers.SimpleRouter()
 
@@ -62,7 +61,6 @@ router.register(r'api/reparos', ReparoView, 'reparos')
 router.register(r'api/intendencias', IntendenciaView, 'intendencias')
 router.register(r'api/materias', MateriaView, 'materias')
 router.register(r'api/submaterias', SubmateriaView, 'submaterias')
-router.register(r'servicios', ServicioTaskView, 'servicios')
 
 urlpatterns = []
 urlpatterns += router.urls

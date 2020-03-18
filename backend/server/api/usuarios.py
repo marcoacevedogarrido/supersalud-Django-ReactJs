@@ -4,7 +4,13 @@ from server.models import Usuario
 class UsuarioSerializers(serializers.ModelSerializer):
     class Meta:
         model = Usuario
-        fields = ['nombre', 'rut']
+        fields = ['nombre',
+                  'rut',
+                  'apellido_paterno',
+                  'apellido_materno',
+                  'fecha_nac',
+                  'correo_electronico',
+                  ]
 
 
 class UsuarioView(viewsets.ModelViewSet):

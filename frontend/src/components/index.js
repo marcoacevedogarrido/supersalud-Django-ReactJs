@@ -1,7 +1,8 @@
 import FormGroupInput from "./Inputs/formGroupInput.vue";
 
 import DropDown from "./Dropdown.vue";
-import PaperTable from "./PaperTable.vue";
+import ReclamoTable from "./ReclamoTable.vue";
+import ReclamoFiltros from './ReclamoFiltros.vue'
 import Button from "./Button";
 
 import Card from "./Cards/Card.vue";
@@ -15,7 +16,8 @@ let components = {
   Card,
   ChartCard,
   StatsCard,
-  PaperTable,
+  ReclamoTable,
+  ReclamoFiltros,
   DropDown,
   SidebarPlugin
 };
@@ -27,7 +29,8 @@ export {
   Card,
   ChartCard,
   StatsCard,
-  PaperTable,
+  ReclamoTable,
+  ReclamoFiltros,
   DropDown,
   Button,
   SidebarPlugin

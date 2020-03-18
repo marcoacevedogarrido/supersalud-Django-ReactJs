@@ -8,22 +8,22 @@ class Usuario(models.Model):
     grupo_permiso = models.ForeignKey('server.Grupo_permiso', on_delete=models.CASCADE, default=True, related_name='usuarios')
     usuario_grupo = models.ForeignKey('server.Usuario_grupo', on_delete=models.CASCADE, default=True, related_name='usuarios')
 
-    nombre = models.CharField(max_length=50, null=True, blank=True)
-    apellido_paterno = models.CharField(max_length=50, null=True, blank=True)
-    apellido_materno = models.CharField(max_length=50, null=True, blank=True)
-    rut = models.IntegerField()
-    direccion = models.CharField(max_length=50, null=True, blank=True)
-    telefono = models.IntegerField()
-    correo_electronico = models.EmailField(max_length=50)
-    fecha_nac = models.DateField(auto_now=False, auto_now_add=False)
-    comuna = models.CharField(max_length=50, null=True, blank=True)
+    nombre = models.CharField(max_length=30, null=True, blank=True, help_text='Nombre del Usuario')
+    apellido_paterno = models.CharField(max_length=50, null=True, blank=True, help_text='Apellido Paterno del Usuario')
+    apellido_materno = models.CharField(max_length=50, null=True, blank=True, help_text='Apellido Materno del Usuario')
+    rut = models.IntegerField(help_text='Rut del Usuario')
+    direccion = models.CharField(max_length=50, null=True, blank=True, help_text='Direccion del Usuario')
+    telefono = models.IntegerField(help_text='Numero Telefonico del Usuario')
+    correo_electronico = models.EmailField(max_length=50, help_text='Correo Electronico del Usuario')
+    fecha_nac = models.DateField(auto_now=False, auto_now_add=False, help_text='Fecha de Nacimiento del Usuario')
+    comuna = models.CharField(max_length=50, null=True, blank=True, help_text='Comuna del Usuario')
     rol = models.IntegerField(default=True)
 
     class Meta:
         ordering = ['id']
 
     def __str__(self):
-        return str(self.nombre + self.apellido_paterno + self.apellido_materno)
+        return str(self.nombre + ' ' + self.apellido_paterno + ' ' + self.apellido_materno)
 
 class UserProfile(models.Model):
     usuario = models.ForeignKey(Usuario, blank=True, null=True, on_delete=models.CASCADE, verbose_name=u'Usuario')
@@ -58,7 +58,6 @@ class Grupo_permiso(models.Model):
     def __str__(self):
         return str(self.id)
 
-
 class Usuario_grupo(models.Model):
     admisibilidad_if = models.IntegerField()
 
@@ -77,27 +76,25 @@ class Tipo_usuario(models.Model):
     def __str__(self):
         return str(self.id)
 
-
 class Reclamante(models.Model):
     afectado = models.ForeignKey('server.Afectado', on_delete=models.CASCADE, default=True, related_name='reclamantes')
     documento = models.ForeignKey('server.Documento', on_delete=models.CASCADE, default=True, related_name='reclamantes')
-    nacionalidad = models.ForeignKey('server.Nacionalidad', on_delete=models.CASCADE, default=True, related_name='reclamantes')
+    nacionalidad = models.ForeignKey('server.Nacionalidad', on_delete=models.CASCADE, default=True, related_name='reclamantes', help_text='Nacionalidad del Cotizante')
 
-    nombre = models.CharField(max_length=50, null=True, blank=True)
-    apellido_paterno = models.CharField(max_length=50, null=True, blank=True)
-    apellido_materno = models.CharField(max_length=50, null=True, blank=True)
-    fecha_nac = models.DateField(auto_now=False, auto_now_add=False)
-    nacionalidad = models.IntegerField()
-    telefono1 = models.IntegerField()
-    telefono2 = models.IntegerField()
-    rut = models.IntegerField()
+    nombre = models.CharField(max_length=50, null=True, blank=True, help_text='Nombre del Reclamante')
+    apellido_paterno = models.CharField(max_length=50, null=True, blank=True, help_text='Apellido Paterno del Reclamante')
+    apellido_materno = models.CharField(max_length=50, null=True, blank=True, help_text='Apellido Materno del Reclamante')
+    fecha_nac = models.DateField(auto_now=False, auto_now_add=False, help_text='Fecha de Nacimiento del Reclamante')
+    nacionalidad = models.IntegerField(help_text='Nacionalidad del Reclamante')
+    telefono1 = models.IntegerField(help_text='Telefono de Reclamante')
+    telefono2 = models.IntegerField(help_text='Telefono Segundario de Reclamante')
+    rut = models.IntegerField(help_text='Rut del Reclamante')
 
     class Meta:
         ordering = ['id']
 
     def __str__(self):
-        return str(self.nombre + self.apellido_paterno + self.apellido_materno)
-
+        return str(self.nombre + ' ' + self.apellido_paterno + ' ' + self.apellido_materno)
 
 class Profesion(models.Model):
     reclamante = models.ForeignKey('server.Reclamante', on_delete=models.CASCADE, default=True, related_name='profesiones')
@@ -123,7 +120,7 @@ class Direccion(models.Model):
         ordering = ['id']
 
     def __str__(self):
-        return str(self.calle + self.pasaje + self.avenida)
+        return str(self.calle + ' ' + self.pasaje + ' ' + self.avenida)
 
 
 class Documento(models.Model):
@@ -142,7 +139,7 @@ class Documento_plantilla(models.Model):
         ordering = ['id']
 
     def __str__(self):
-        return str(self.id + self.document)
+        return str(self.id + ' ' + self.document)
 
 class Genero(models.Model):
     reclamante = models.ForeignKey('server.Reclamante', on_delete=models.CASCADE, default=True, related_name='generos')
@@ -178,7 +175,7 @@ class Historial(models.Model):
         ordering = ['id']
 
     def __str__(self):
-        return str(self.usuario + self.fecha)
+        return str(self.usuario + ' ' + self.fecha)
 
 
 class Sexo(models.Model):
@@ -230,7 +227,7 @@ class Afectado(models.Model):
         ordering = ['id']
 
     def __str__(self):
-        return str(self.nombre + self.apellido_paterno + self.apellido_materno)
+        return str(self.nombre + ' ' + self.apellido_paterno + ' ' + self.apellido_materno)
 
 
 class Comuna(models.Model):
@@ -405,7 +402,7 @@ class Reparo(models.Model):
         ordering = ['id']
 
     def __str__(self):
-        return str(self.id + self.descripcion)
+        return str(self.id + ' ' + self.descripcion)
 
 class Intendencia(models.Model):
     submateria = models.ForeignKey('server.Submateria', on_delete=models.CASCADE, default=True, related_name='intendencias')
@@ -454,11 +451,3 @@ class Submateria(models.Model):
 
     def __str__(self):
         return str(self.id)
-
-class ServicioTask(models.Model):
-
-    class Meta:
-        ordering = ['id']
-
-        def __str__(self):
-            return str(self.id)

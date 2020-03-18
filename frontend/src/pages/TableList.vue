@@ -1,15 +1,18 @@
 <template>
 <b-card>
-    <paper-table></paper-table>
+  <reclamo-filtros></reclamo-filtros>
+  <reclamo-table></reclamo-table>
 </b-card>
 </template>
 
 <script>
-import { PaperTable } from "@/components";
+import { ReclamoTable } from "@/components";
+import { ReclamoFiltros } from '@/components';
 
 export default {
   components: {
-    PaperTable
+    ReclamoTable,
+    ReclamoFiltros,
   }
 }
 </script>
