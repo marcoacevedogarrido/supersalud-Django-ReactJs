@@ -1,6 +1,8 @@
 ### instalar dependencias
 ```
-npm install
+pip install pip
+```
+pip install -r requirements.txt
 ```
 ### localhost:8080
 ```

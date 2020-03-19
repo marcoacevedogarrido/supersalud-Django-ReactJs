@@ -1,0 +1,13 @@
+### instalar dependencias
+```
+npm install
+```
+### instalar dependencias bootstrap-vue 
+```
+npm install vue bootstrap-vue bootstrap
+```
+### localhost:8080
+```
+npm run dev
+```
+
