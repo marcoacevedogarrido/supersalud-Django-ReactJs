@@ -1,7 +1,7 @@
 <template>
 <card>
   <div slot="raw-content" class="table-responsive">
-    <table id='Table' class="table table-striped text-center" :class="tableClass">
+    <table id='Table' class="table table-striped text-center">
        <thead>
          <tr>
            <td><strong>Nombre</strong></td>
@@ -13,7 +13,7 @@
          </tr>
        </thead>
        <tbody>
-         <tr v-for="item in documentos">
+         <tr v-for="item in documentos" :key='item.id'>
            <td>
              {{ item.nombre }}
            </td>
@@ -40,36 +40,15 @@
 </template>
 
 <script>
-import axios from 'axios'
-
-const Listarpath = 'http://127.0.0.1:8000/api/afectados/'
+import { mapState } from 'vuex'
 
 export default {
   name: 'reclamo-table',
-  data () {
-    return {
-      id:'',
-      nombre:'',
-      apellido_paterno:'',
-      apellido_materno:'',
-      fecha_nac:'',
-      telefono1:'',
-      rut:'',
-      documentos: []
-    }
+  mounted () {
+    this.$store.dispatch('loadDocumentos')
   },
-  methods: {
-    getLinea () {
-      axios.get(Listarpath).then((response) => {
-        this.documentos = response.data
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-    },
-  },
-  created () {
-    this.getLinea()
-  }
+  computed: mapState([
+    'documentos'
+  ])
 }
 </script>

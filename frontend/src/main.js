@@ -22,7 +22,7 @@ import "vue-notifyjs/themes/default.css";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
+import store from './store/store'
 
 Vue.use(PaperDashboard);
 Vue.use(BootstrapVue)
@@ -31,5 +31,6 @@ Vue.use(IconsPlugin)
 /* eslint-disable no-new */
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  store
 }).$mount("#app");

@@ -1,4 +1,4 @@
-<template>
+/*<template>
 <b-container class="bv-example-row">
   <b-row>
     <b-col sm>logo SupIntSalud</b-col>
@@ -66,3 +66,4 @@
     color: #000000 !important;
   }
 </style>
+*/
