@@ -1,6 +1,5 @@
 
-# Created by https://www.gitignore.io/api/vuejs,django,python,windows,virtualenv
-# Edit at https://www.gitignore.io/?templates=vuejs,django,python,windows,virtualenv
+
 
 ### Django ###
 *.log
