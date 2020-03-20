@@ -1,4 +1,4 @@
-#!/home/apiux/Escritorio/supersalud/env/bin/python2
+#!/home/apiux/Escritorio/supersalud/env/bin/python3
 from django.core import management
 
 if __name__ == "__main__":
