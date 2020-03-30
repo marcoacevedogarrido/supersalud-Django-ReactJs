@@ -1,36 +1,62 @@
-/*!
-
- =========================================================
- * Vue Paper Dashboard - v2.0.0
- =========================================================
-
- * Product Page: http://www.creative-tim.com/product/paper-dashboard
- * Copyright 2019 Creative Tim (http://www.creative-tim.com)
- * Licensed under MIT (https://github.com/creativetimofficial/paper-dashboard/blob/master/LICENSE.md)
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-import Vue from "vue";
-import App from "./App";
-import router from "./router/index";
-
-import PaperDashboard from "./plugins/paperDashboard";
-import "vue-notifyjs/themes/default.css";
+/* eslint-disable */
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import IdleVue from 'idle-vue'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-import store from './store/store'
+import Vuesax from 'vuesax'
+import 'vuesax/dist/vuesax.css'
+import Slider from '@jeremyhamm/vue-slider'
+import vuetify from '@/plugins/vuetify'
+import Swal from 'sweetalert2'
+import 'sweetalert2/src/sweetalert2.scss'
 
-Vue.use(PaperDashboard);
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import { ClientTable } from 'vue-tables-2';
+
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
+const eventsHub = new Vue()
+
+Vue.use(ClientTable);
+Vue.use(VueAxios, axios)
+Vue.config.productionTip = false
+Vue.use(IdleVue, {
+  eventEmitter: eventsHub,
+  idleTime: 720000
+})
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+Vue.use(Vuesax, {
+ })
+Vue.use(Slider)
 
-/* eslint-disable no-new */
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (!store.getters.loggedIn) {
+      next({ name: 'login' })
+    } else {
+      next()
+    }
+  }
+  else if (to.matched.some(record => record.meta.requiresLogged)) {
+    if (store.getters.loggedIn) {
+      next({ name: 'home' })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
+
 new Vue({
+  vuetify,
   router,
-  render: h => h(App),
-  store
-}).$mount("#app");
+  store,
+  render: h => h(App)
+}).$mount('#app')

@@ -1,17 +1,29 @@
-### instalar dependencias
+# vuejsauth
+
+## Project setup
 ```
 npm install
 ```
-### instalar dependencias bootstrap-vue 
+
+### Compiles and hot-reloads for development
 ```
-npm install vue bootstrap-vue bootstrap
-```
-### instalar dependencias vuex-axios 
-```
-npm install vuex axios vue-axios
-```
-### localhost:8080
-```
-npm run dev
+npm run serve
 ```
 
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

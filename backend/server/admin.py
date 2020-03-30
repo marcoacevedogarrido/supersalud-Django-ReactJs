@@ -1,6 +1,5 @@
 from django.contrib import admin
 
-
 from .models import Usuario, UserProfile, Grupo, Tipo_usuario, Usuario_grupo \
                         , Grupo_permiso, Reclamante, Profesion, Documento \
                         , Documento_plantilla, Genero, Nacionalidad, Sexo \

@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from django.contrib.auth.models import User
 
 
@@ -317,7 +318,7 @@ class Reclamo(models.Model):
     tipo_reclamo = models.ForeignKey('server.Tipo_reclamo', on_delete=models.CASCADE, default=True, related_name='reclamos')
     reclamante = models.ForeignKey('server.Reclamante', on_delete=models.CASCADE, default=True, related_name='reclamos')
 
-    fecha_presentacion = models.DateField(auto_now=False, auto_now_add=False)
+    fecha_presentacion = models.DateField(default=timezone.now)
     fecha_cierre = models.DateField(auto_now=False, auto_now_add=False)
     materia = models.IntegerField()
     sub_materia1 = models.IntegerField()
@@ -332,6 +333,10 @@ class Reclamo(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
 
 class Tipo_reclamo(models.Model):
 
