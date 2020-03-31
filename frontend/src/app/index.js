@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import Header from 'components/Header/index';
 import Sidebar from 'containers/SideNav/index';
 import Footer from 'components/Footer';
-// import Tour from '../components/Tour/index';
-
-
 
 import {
   ABOVE_THE_HEADER,
@@ -37,7 +34,6 @@ class App extends React.Component {
     return (
       <div className={`app-container ${drawerStyle}`}>
 
-
         <Sidebar />
         <div className="app-main-container">
           <div
@@ -56,29 +52,7 @@ class App extends React.Component {
                   component={asyncComponent(() => import('./routes/Home'))} />
                 <Route exact path={`${match.url}/listado-proceso`}
                   component={asyncComponent(() => import('./routes/ListadoProceso'))} />
-                <Route exact path={`${match.url}/crear-proceso`}
-                  component={asyncComponent(() => import('./routes/CrearProceso'))} />
 
-                <Route exact path={`${match.url}/editar-proceso/:id`}
-                  component={asyncComponent(() => import('./routes/EditarProceso'))} />
-                <Route exact path={`${match.path}/detalle-proceso/:id`}
-                  component={asyncComponent(() => import('./routes/Detalle'))} />
-                <Route exact path={`${match.path}/detalle-proceso/:id/error-401`}
-                  component={asyncComponent(() => import('components/Error401'))} />
-                <Route exact path={`${match.url}/entidades/`}
-                  component={asyncComponent(() => import('./routes/Entidades'))} />
-                <Route exact path={`${match.url}/modelo`}
-                  component={asyncComponent(() => import('./routes/Modelo'))} />
-                <Route exact path={`${match.url}/administrar`}
-                  component={asyncComponent(() => import('./routes/Administrar'))} />
-                <Route exact path={`${match.url}/administrar/crear-usuario`}
-                  component={asyncComponent(() => import('./routes/Administrar/CrearUsuario/CrearUsuario'))} />
-                <Route exact path={`${match.url}/perfil`}
-                  component={asyncComponent(() => import('./routes/Perfil'))} />
-                <Route exact path={`${match.path}/lista-modelo`}
-                  component={asyncComponent(() => import('./routes/ListaModelo'))} />
-                <Route exact path={`${match.path}/entrenamiento/:id`}
-                  component={asyncComponent(() => import('./routes/Entrenamiento'))} />
                 <Route component={asyncComponent(() => import('components/Error404'))} />
               </Switch>
             </div>

@@ -4,9 +4,7 @@ import {connect} from 'react-redux'
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {userSignOut, loadUser} from 'actions/Auth/Auth';
-import IntlMessages from 'util/IntlMessages';
 import { NavLink } from 'react-router-dom';
-
 
 class UserInfo extends React.Component {
 
@@ -24,14 +22,10 @@ class UserInfo extends React.Component {
     this.setState({open: false});
   };
 
-
-
-
   render() {
 
     const {auth} = this.props
 
-    
     return (
       <div className="user-profile d-flex flex-row align-items-center">
         <Avatar

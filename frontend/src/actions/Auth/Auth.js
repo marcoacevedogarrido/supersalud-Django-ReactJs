@@ -98,8 +98,6 @@ export const userSignOut = () => (dispatch, getState) => {
     })
 };
 
-
-
 export const userSignUp = (user) => {
     return {
         type: SIGNUP_USER,

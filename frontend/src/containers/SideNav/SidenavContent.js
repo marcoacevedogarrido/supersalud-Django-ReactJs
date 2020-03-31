@@ -1,13 +1,7 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 
-import IntlMessages from 'util/IntlMessages';
 import CustomScrollbars from 'util/CustomScrollbars';
-
-import { connect } from 'react-redux';
-
-import { loadUser } from 'actions/Auth/Auth';
-
 
 class SidenavContent extends Component {
   componentDidMount() {
@@ -106,50 +100,6 @@ class SidenavContent extends Component {
   }
 
   render() {
-
-    const { auth } = this.props
-
-    if (!auth.user) {
-      return (
-        <CustomScrollbars className=" scrollbar">
-          <ul className="nav-menu">
-            <li className="nav-header">
-              Menú
-            </li>
-            <li className="menu no-arrow">
-              <NavLink to="/app/index">
-                <i className="zmdi zmdi-home zmdi-hc-fw" />
-                <span className="nav-text">Dashboard</span>
-              </NavLink>
-            </li>
-            <li className="menu no-arrow">
-              <NavLink to="/app/listado-proceso">
-                <i className="zmdi zmdi-dns zmdi-hc-fw" />
-                <span className="nav-text">Listado de Procesos</span>
-              </NavLink>
-            </li>
-            <li className="menu no-arrow">
-              <NavLink to="/app/crear-proceso">
-                <i className="zmdi zmdi-collection-plus zmdi-hc-fw" />
-                <span className="nav-text">Crear Proceso</span>
-              </NavLink>
-            </li>
-            <li className="menu no-arrow">
-              <NavLink to="/app/modelo">
-                <i className="zmdi zmdi-view-module zmdi-hc-fw" />
-                <span className="nav-text">Modelos</span>
-              </NavLink>
-            </li>
-            <li className="menu no-arrow">
-              <NavLink to="/app/administrar">
-                <i className="zmdi zmdi-view-dashboard zmdi-hc-fw" />
-                <span className="nav-text">Administrar</span>
-              </NavLink>
-            </li>
-          </ul>
-        </CustomScrollbars>
-      )
-    } else {
       return (
         <CustomScrollbars className=" scrollbar">
           <ul className="nav-menu">
@@ -165,43 +115,15 @@ class SidenavContent extends Component {
             <li className="menu no-arrow">
               <NavLink to="/app/listado-proceso">
                 <i className="zmdi zmdi-dns zmdi-hc-fw" />
-                <span className="nav-text">Listado de Procesos</span>
+                <span className="nav-text">Ejemplo</span>
               </NavLink>
             </li>
-            <li className="menu no-arrow">
-              <NavLink to="/app/crear-proceso">
-                <i className="zmdi zmdi-collection-plus zmdi-hc-fw" />
-                <span className="nav-text">Crear Proceso</span>
-              </NavLink>
-            </li>
-            <li className="menu no-arrow">
-              <NavLink to="/app/modelo">
-                <i className="zmdi zmdi-view-module zmdi-hc-fw" />
-                <span className="nav-text">Modelos</span>
-              </NavLink>
-            </li>
-            {auth.user.is_staff ?
-            <Fragment>
-              <li className="menu no-arrow">
-                <NavLink to="/app/administrar">
-                  <i className="zmdi zmdi-view-dashboard zmdi-hc-fw" />
-                  <span className="nav-text">Administrar</span>
-                </NavLink>
-              </li>
-              
-            </Fragment>
-              :
-              null
-            }
+            
           </ul>
         </CustomScrollbars>
       )
     }
   }
-}
 
-const mapStateToProps = state => ({
-  auth: state.auth
-})
 
-export default connect(mapStateToProps, { loadUser })(withRouter(SidenavContent))
+export default (withRouter(SidenavContent))
