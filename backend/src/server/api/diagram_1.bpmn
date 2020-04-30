@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_019aocq" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.0">
+  <bpmn:process id="Proceso_demo_1" name="Proceso Demo" isExecutable="true" camunda:versionTag="1">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0objljw</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_0objljw" sourceRef="StartEvent_1" targetRef="Activity_0y963vu" />
+    <bpmn:sequenceFlow id="Flow_0vbz5sq" sourceRef="Activity_0y963vu" targetRef="Activity_0mmqob4" />
+    <bpmn:sequenceFlow id="Flow_0w7o18v" sourceRef="Activity_0mmqob4" targetRef="Activity_0orxrpp" />
+    <bpmn:sequenceFlow id="Flow_18e2vnv" sourceRef="Activity_0orxrpp" targetRef="Activity_1l9r5a8" />
+    <bpmn:endEvent id="Event_1h2611m">
+      <bpmn:incoming>Flow_1tkvbtu</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1tkvbtu" sourceRef="Activity_1l9r5a8" targetRef="Event_1h2611m" />
+    <bpmn:userTask id="Activity_0y963vu" name="Tarea 1" camunda:assignee="demo">
+      <bpmn:incoming>Flow_0objljw</bpmn:incoming>
+      <bpmn:outgoing>Flow_0vbz5sq</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0mmqob4" name="Tarea 2" camunda:assignee="demo">
+      <bpmn:incoming>Flow_0vbz5sq</bpmn:incoming>
+      <bpmn:outgoing>Flow_0w7o18v</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_0orxrpp" name="Tarea 3" camunda:assignee="demo">
+      <bpmn:incoming>Flow_0w7o18v</bpmn:incoming>
+      <bpmn:outgoing>Flow_18e2vnv</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_1l9r5a8" name="Tarea 4" camunda:assignee="demo">
+      <bpmn:incoming>Flow_18e2vnv</bpmn:incoming>
+      <bpmn:outgoing>Flow_1tkvbtu</bpmn:outgoing>
+    </bpmn:userTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Proceso_demo_1">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0objljw_di" bpmnElement="Flow_0objljw">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="270" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vbz5sq_di" bpmnElement="Flow_0vbz5sq">
+        <di:waypoint x="370" y="117" />
+        <di:waypoint x="430" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0w7o18v_di" bpmnElement="Flow_0w7o18v">
+        <di:waypoint x="530" y="117" />
+        <di:waypoint x="590" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18e2vnv_di" bpmnElement="Flow_18e2vnv">
+        <di:waypoint x="690" y="117" />
+        <di:waypoint x="750" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_1h2611m_di" bpmnElement="Event_1h2611m">
+        <dc:Bounds x="912" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1tkvbtu_di" bpmnElement="Flow_1tkvbtu">
+        <di:waypoint x="850" y="117" />
+        <di:waypoint x="912" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Activity_165mys7_di" bpmnElement="Activity_0y963vu" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="270" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ee7r0d_di" bpmnElement="Activity_0mmqob4" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="430" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0pp62u8_di" bpmnElement="Activity_0orxrpp" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="590" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0dw39bm_di" bpmnElement="Activity_1l9r5a8" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <dc:Bounds x="750" y="77" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

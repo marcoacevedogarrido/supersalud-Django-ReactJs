@@ -1,0 +1,39 @@
+version: "3"
+services:
+    nginx:
+        image: nginx:latest
+        container_name: nginx_test
+        ports:
+            - "8000:80"
+        volumes:
+            - ./src:/src
+            - ./config/nginx:/etc/nginx/conf.d
+        depends_on:
+            - supersalud
+
+    supersalud:
+        build: .
+        container_name: backend
+        depends_on:
+            - postgres_supersalud
+        volumes:
+            - ./src:/src
+        command: bash -c "python manage.py makemigrations --noinput && python manage.py migrate && python manage.py loaddata base && gunicorn --workers 4 --bind :8000 --timeout 90 conf.wsgi"
+
+    postgres_supersalud:
+        image: postgres:latest
+        container_name: post_amicar
+        ports:
+          - 5432:5432
+        environment:
+          - POSTGRES_USER=apiux_adm
+          - POSTGRES_PASSWORD=apiux.super_2020
+          - POSTGRES_DB=postgres_supersalud
+        volumes:
+          - postgres_data:/var/lib/postgresql/data/
+
+
+volumes:
+    postgres_data:
+    
+

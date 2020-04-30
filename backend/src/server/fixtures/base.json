@@ -1,0 +1,4336 @@
+[
+    {
+        "model": "server.Sexo",
+        "pk": 1,
+        "fields": {
+            "desc_sexo": "Hombre"
+        }
+    },
+    {
+        "model": "server.Sexo",
+        "pk": 2,
+        "fields": {
+            "desc_sexo": "Mujer"
+        }
+    },
+    {
+        "model": "server.Sexo",
+        "pk": 3,
+        "fields": {
+            "desc_sexo": "Indefinido"
+        }
+    },
+    {
+        "model": "server.Genero",
+        "pk": 1,
+        "fields": {
+            "desc_genero": "Femenino"
+        }
+    },
+    {
+        "model": "server.Genero",
+        "pk": 2,
+        "fields": {
+            "desc_genero": "Masculino"
+        }
+    },
+    {
+        "model": "server.Genero",
+        "pk": 3,
+        "fields": {
+            "desc_genero": "Indefinido"
+        }
+    },
+    {
+        "model": "server.Nacionalidad",
+        "pk": 38,
+        "fields": {
+            "codigo": 38,
+            "gentilicio": "Chileno/a",
+            "nombre": "Chile"
+        }
+    },
+    {
+        "model": "server.Aseguradora",
+        "pk": 1,
+        "fields": {
+            "nombre_isapre": "Banmédica S.A.",
+            "codigo_isapre": 99,
+            "nombre_isapre_corto": "Isapre Banmedica"
+        }
+    },
+    {
+        "model": "server.Process_Definition",
+        "pk": 1,
+        "fields": {
+            "id_camunda": "1420-3425-43241",
+            "key": "Proceso_demo_1:1420-3425-43241",
+            "category": "Isapre Banmedica",
+            "description": "",
+            "name": "",
+            "version": 1,
+            "resource": "",
+            "deploymentId": "",
+            "diagram": "",
+            "suspended": "",
+            "tenantId": "",
+            "versionTag": "",
+            "historyTimeToLive": "",
+            "startableInTasklist": "" 
+        }
+    },
+    {
+        "model": "server.Proceso",
+        "pk": 1,
+        "fields": {
+            "nombre": "Admisibilidad IF",
+            "descripcion": "Admisibilidad IF",
+            "process_definition": 1
+        }
+    },
+    {
+        "model": "server.Proceso",
+        "pk": 1,
+        "fields": {
+            "nombre": "Admisibilidad IP",
+            "descripcion": "Admisibilidad IP",
+            "process_definition": 1
+        }
+    },
+    {
+        "model": "server.Tarea",
+        "pk": 1,
+        "fields": {
+            "proceso": 1,
+            "nombre": "001. Analiza Admisibilidad y/o reclasifica materia y submateria",
+            "sla_dias": 1
+        }
+    },
+    {
+        "model": "server.Tarea",
+        "pk": 2,
+        "fields": {
+            "proceso": 1,
+            "nombre": "010. Elabora Documentación de Derivación",
+            "sla_dias": 1
+        }
+    },
+    {
+        "model": "server.Tarea",
+        "pk": 3,
+        "fields": {
+            "proceso": 1,
+            "nombre": "030. Elabora Solicitud de Mayores Antecedentes",
+            "sla_dias": 1
+        }
+    },
+    {
+        "model": "server.Tarea",
+        "pk": 4,
+        "fields": {
+            "proceso": 1,
+            "nombre": "040. Elabora Solicitud de Antecedentes Preliminares a la Aseguradora",
+            "sla_dias": 1
+        }
+    },
+    {
+        "model": "server.Tarea",
+        "pk": 5,
+        "fields": {
+            "proceso": 1,
+            "nombre": "050. Generar Reclamo en Sistema de Reclamos",
+            "sla_dias": 1
+        }
+    },
+    {
+        "model": "server.Tarea",
+        "pk": 6,
+        "fields": {
+            "proceso": 1,
+            "nombre": "060. Elabora Respuesta Directa",
+            "sla_dias": 1
+        }
+    },
+    {
+        "model": "server.Materia",
+        "pk": 1,
+        "fields": {
+            "proceso": 1,
+            "descripcion": "Descripcion Materia"
+        }
+    },
+    {
+        "model": "server.Sub_Materia",
+        "pk": 1,
+        "fields": {
+            "materia": 1,
+            "descripcion": "Descripcion sub-materia"
+        }
+    },
+    {
+        "model": "server.Tipo_Reclamo",
+        "pk": 1,
+        "fields": {
+            "proceso": 1,
+            "tipo": "Tipo reclamo"
+        }
+    },
+    {
+        "model": "server.Prestador",
+        "pk": 1,
+        "fields": {
+            "nombre": "Prestador test",
+            "region": 1,
+            "provincia": 1,
+            "comuna": 1
+        }
+    },
+    {
+        "model": "server.Tipo_Prioridad",
+        "pk": 1,
+        "fields": {
+            "codigo": 1,
+            "descripcion": "Prioridad nivel 1"
+        }
+    },
+    {
+        "model": "server.Tipo_Prioridad",
+        "pk": 2,
+        "fields": {
+            "codigo": 2,
+            "descripcion": "Prioridad nivel 2"
+        }
+    },
+    {
+        "model": "server.Tipo_Prioridad",
+        "pk": 3,
+        "fields": {
+            "codigo": 3,
+            "descripcion": "Prioridad nivel 3"
+        }
+    },
+    {
+        "model": "server.Tipo_Prioridad",
+        "pk": 4,
+        "fields": {
+            "codigo": 4,
+            "descripcion": "Prioridad nivel 4"
+        }
+    },
+    {
+        "model": "server.Tipo_Prioridad",
+        "pk": 5,
+        "fields": {
+            "codigo": 5,
+            "descripcion": "Prioridad nivel 5"
+        }
+    },
+    {
+        "model": "server.Region",
+        "pk": 1,
+        "fields": {
+          "nombre": "Tarapacá",
+          "region_ordinal": "I",
+          "codigo_region": "01"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 2,
+        "fields": {
+          "nombre": "Antofagasta",
+          "region_ordinal": "II",
+          "codigo_region": "02"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 3,
+        "fields": {
+          "nombre": "Atacama",
+          "region_ordinal": "III",
+          "codigo_region": "03"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 4,
+        "fields": {
+          "nombre": "Coquimbo",
+          "region_ordinal": "IV",
+          "codigo_region": "04"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 5,
+        "fields": {
+          "nombre": "Valparaíso",
+          "region_ordinal": "V",
+          "codigo_region": "05"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 6,
+        "fields": {
+          "nombre": "Libertador General Bernardo O'Higgins",
+          "region_ordinal": "VI",
+          "codigo_region": "06"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 7,
+        "fields": {
+          "nombre": "Maule",
+          "region_ordinal": "VII",
+          "codigo_region": "07"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 8,
+        "fields": {
+          "nombre": "Biobío",
+          "region_ordinal": "VIII",
+          "codigo_region": "08"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 9,
+        "fields": {
+          "nombre": "La Araucanía",
+          "region_ordinal": "IX",
+          "codigo_region": "09"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 10,
+        "fields": {
+          "nombre": "Los Lagos",
+          "region_ordinal": "X",
+          "codigo_region": "10"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 11,
+        "fields": {
+          "nombre": "Aysén del General Carlos Ibáñez del Campo",
+          "region_ordinal": "XI",
+          "codigo_region": "11"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 12,
+        "fields": {
+          "nombre": "Magallanes y de la Antártica Chilena",
+          "region_ordinal": "XII",
+          "codigo_region": "12"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 13,
+        "fields": {
+          "nombre": "Metropolitana de Santiago",
+          "region_ordinal": "RM",
+          "codigo_region": "13"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 14,
+        "fields": {
+          "nombre": "Los Ríos",
+          "region_ordinal": "XIV",
+          "codigo_region": "14"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 15,
+        "fields": {
+          "nombre": "Arica y Parinacota",
+          "region_ordinal": "XV",
+          "codigo_region": "15"
+        }
+      },
+      {
+        "model": "server.Region",
+        "pk": 16,
+        "fields": {
+          "nombre": "Ñuble",
+          "region_ordinal": "XVI",
+          "codigo_region": "16"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 1,
+        "fields": {
+          "region": 1,
+          "nombre": "Iquique",
+          "codigo_provincia": "011"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 2,
+        "fields": {
+          "region": 1,
+          "nombre": "Tamarugal",
+          "codigo_provincia": "014"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 3,
+        "fields": {
+          "region": 2,
+          "nombre": "Antofagasta",
+          "codigo_provincia": "021"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 4,
+        "fields": {
+          "region": 2,
+          "nombre": "El Loa",
+          "codigo_provincia": "022"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 5,
+        "fields": {
+          "region": 2,
+          "nombre": "Tocopilla",
+          "codigo_provincia": "023"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 6,
+        "fields": {
+          "region": 3,
+          "nombre": "Copiapó",
+          "codigo_provincia": "031"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 7,
+        "fields": {
+          "region": 3,
+          "nombre": "Chañaral",
+          "codigo_provincia": "032"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 8,
+        "fields": {
+          "region": 3,
+          "nombre": "Huasco",
+          "codigo_provincia": "033"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 9,
+        "fields": {
+          "region": 4,
+          "nombre": "Elqui",
+          "codigo_provincia": "041"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 10,
+        "fields": {
+          "region": 4,
+          "nombre": "Choapa",
+          "codigo_provincia": "042"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 11,
+        "fields": {
+          "region": 4,
+          "nombre": "Limarí",
+          "codigo_provincia": "043"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 12,
+        "fields": {
+          "region": 5,
+          "nombre": "Valparaíso",
+          "codigo_provincia": "051"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 13,
+        "fields": {
+          "region": 5,
+          "nombre": "Isla de Pascua",
+          "codigo_provincia": "052"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 14,
+        "fields": {
+          "region": 5,
+          "nombre": "Los Andes",
+          "codigo_provincia": "053"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 15,
+        "fields": {
+          "region": 5,
+          "nombre": "Petorca",
+          "codigo_provincia": "054"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 16,
+        "fields": {
+          "region": 5,
+          "nombre": "Quillota",
+          "codigo_provincia": "055"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 17,
+        "fields": {
+          "region": 5,
+          "nombre": "San Antonio",
+          "codigo_provincia": "056"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 18,
+        "fields": {
+          "region": 5,
+          "nombre": "San Felipe de Aconcagua",
+          "codigo_provincia": "057"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 19,
+        "fields": {
+          "region": 5,
+          "nombre": "Marga Marga",
+          "codigo_provincia": "058"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 20,
+        "fields": {
+          "region": 6,
+          "nombre": "Cachapoal",
+          "codigo_provincia": "061"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 21,
+        "fields": {
+          "region": 6,
+          "nombre": "Cardenal Caro",
+          "codigo_provincia": "062"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 22,
+        "fields": {
+          "region": 6,
+          "nombre": "Colchagua",
+          "codigo_provincia": "063"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 23,
+        "fields": {
+          "region": 7,
+          "nombre": "Talca",
+          "codigo_provincia": "071"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 24,
+        "fields": {
+          "region": 7,
+          "nombre": "Cauquenes",
+          "codigo_provincia": "072"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 25,
+        "fields": {
+          "region": 7,
+          "nombre": "Curicó",
+          "codigo_provincia": "073"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 26,
+        "fields": {
+          "region": 7,
+          "nombre": "Linares",
+          "codigo_provincia": "074"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 27,
+        "fields": {
+          "region": 8,
+          "nombre": "Concepción",
+          "codigo_provincia": "081"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 28,
+        "fields": {
+          "region": 8,
+          "nombre": "Arauco",
+          "codigo_provincia": "082"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 29,
+        "fields": {
+          "region": 8,
+          "nombre": "Biobío",
+          "codigo_provincia": "083"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 30,
+        "fields": {
+          "region": 9,
+          "nombre": "Cautín",
+          "codigo_provincia": "091"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 31,
+        "fields": {
+          "region": 9,
+          "nombre": "Malleco",
+          "codigo_provincia": "092"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 32,
+        "fields": {
+          "region": 10,
+          "nombre": "Llanquihue",
+          "codigo_provincia": "101"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 33,
+        "fields": {
+          "region": 10,
+          "nombre": "Chiloé",
+          "codigo_provincia": "102"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 34,
+        "fields": {
+          "region": 10,
+          "nombre": "Osorno",
+          "codigo_provincia": "103"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 35,
+        "fields": {
+          "region": 10,
+          "nombre": "Palena",
+          "codigo_provincia": "104"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 36,
+        "fields": {
+          "region": 11,
+          "nombre": "Coihaique",
+          "codigo_provincia": "111"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 37,
+        "fields": {
+          "region": 11,
+          "nombre": "Aisén",
+          "codigo_provincia": "112"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 38,
+        "fields": {
+          "region": 11,
+          "nombre": "Capitán Prat",
+          "codigo_provincia": "113"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 39,
+        "fields": {
+          "region": 11,
+          "nombre": "General Carrera",
+          "codigo_provincia": "114"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 40,
+        "fields": {
+          "region": 12,
+          "nombre": "Magallanes",
+          "codigo_provincia": "121"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 41,
+        "fields": {
+          "region": 12,
+          "nombre": "Antártica Chilena",
+          "codigo_provincia": "122"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 42,
+        "fields": {
+          "region": 12,
+          "nombre": "Tierra del Fuego",
+          "codigo_provincia": "123"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 43,
+        "fields": {
+          "region": 12,
+          "nombre": "Última Esperanza",
+          "codigo_provincia": "124"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 44,
+        "fields": {
+          "region": 13,
+          "nombre": "Santiago",
+          "codigo_provincia": "131"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 45,
+        "fields": {
+          "region": 13,
+          "nombre": "Cordillera",
+          "codigo_provincia": "132"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 46,
+        "fields": {
+          "region": 13,
+          "nombre": "Chacabuco",
+          "codigo_provincia": "133"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 47,
+        "fields": {
+          "region": 13,
+          "nombre": "Maipo",
+          "codigo_provincia": "134"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 48,
+        "fields": {
+          "region": 13,
+          "nombre": "Melipilla",
+          "codigo_provincia": "135"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 49,
+        "fields": {
+          "region": 13,
+          "nombre": "Talagante",
+          "codigo_provincia": "136"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 50,
+        "fields": {
+          "region": 14,
+          "nombre": "Valdivia",
+          "codigo_provincia": "141"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 51,
+        "fields": {
+          "region": 14,
+          "nombre": "Ranco",
+          "codigo_provincia": "142"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 52,
+        "fields": {
+          "region": 15,
+          "nombre": "Arica",
+          "codigo_provincia": "151"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 53,
+        "fields": {
+          "region": 15,
+          "nombre": "Parinacota",
+          "codigo_provincia": "152"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 54,
+        "fields": {
+          "region": 16,
+          "nombre": "Diguillín",
+          "codigo_provincia": "161"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 55,
+        "fields": {
+          "region": 16,
+          "nombre": "Itata",
+          "codigo_provincia": "162"
+        }
+      },
+      {
+        "model": "server.Provincia",
+        "pk": 56,
+        "fields": {
+          "region": 16,
+          "nombre": "Punilla",
+          "codigo_provincia": "163"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 1,
+        "fields": {
+          "region": 1,
+          "provincia": 1,
+          "nombre": "Iquique",
+          "codigo_comuna": "01101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 2,
+        "fields": {
+          "region": 1,
+          "provincia": 1,
+          "nombre": "Alto Hospicio",
+          "codigo_comuna": "01107"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 3,
+        "fields": {
+          "region": 1,
+          "provincia": 2,
+          "nombre": "Pozo Almonte",
+          "codigo_comuna": "01401"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 4,
+        "fields": {
+          "region": 1,
+          "provincia": 2,
+          "nombre": "Camiña",
+          "codigo_comuna": "01402"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 5,
+        "fields": {
+          "region": 1,
+          "provincia": 2,
+          "nombre": "Colchane",
+          "codigo_comuna": "01403"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 6,
+        "fields": {
+          "region": 1,
+          "provincia": 2,
+          "nombre": "Huara",
+          "codigo_comuna": "01404"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 7,
+        "fields": {
+          "region": 1,
+          "provincia": 2,
+          "nombre": "Pica",
+          "codigo_comuna": "01405"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 8,
+        "fields": {
+          "region": 2,
+          "provincia": 3,
+          "nombre": "Antofagasta",
+          "codigo_comuna": "02101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 9,
+        "fields": {
+          "region": 2,
+          "provincia": 3,
+          "nombre": "Mejillones",
+          "codigo_comuna": "02102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 10,
+        "fields": {
+          "region": 2,
+          "provincia": 3,
+          "nombre": "Sierra Gorda",
+          "codigo_comuna": "02103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 11,
+        "fields": {
+          "region": 2,
+          "provincia": 3,
+          "nombre": "Taltal",
+          "codigo_comuna": "02104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 12,
+        "fields": {
+          "region": 2,
+          "provincia": 4,
+          "nombre": "Calama",
+          "codigo_comuna": "02201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 13,
+        "fields": {
+          "region": 2,
+          "provincia": 4,
+          "nombre": "Ollagüe",
+          "codigo_comuna": "02202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 14,
+        "fields": {
+          "region": 2,
+          "provincia": 4,
+          "nombre": "San Pedro de Atacama",
+          "codigo_comuna": "02203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 15,
+        "fields": {
+          "region": 2,
+          "provincia": 5,
+          "nombre": "Tocopilla",
+          "codigo_comuna": "02301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 16,
+        "fields": {
+          "region": 2,
+          "provincia": 5,
+          "nombre": "María Elena",
+          "codigo_comuna": "02302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 17,
+        "fields": {
+          "region": 3,
+          "provincia": 6,
+          "nombre": "Copiapó",
+          "codigo_comuna": "03101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 18,
+        "fields": {
+          "region": 3,
+          "provincia": 6,
+          "nombre": "Caldera",
+          "codigo_comuna": "03102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 19,
+        "fields": {
+          "region": 3,
+          "provincia": 6,
+          "nombre": "Tierra Amarilla",
+          "codigo_comuna": "03103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 20,
+        "fields": {
+          "region": 3,
+          "provincia": 7,
+          "nombre": "Chañaral",
+          "codigo_comuna": "03201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 21,
+        "fields": {
+          "region": 3,
+          "provincia": 7,
+          "nombre": "Diego de Almagro",
+          "codigo_comuna": "03202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 22,
+        "fields": {
+          "region": 3,
+          "provincia": 8,
+          "nombre": "Vallenar",
+          "codigo_comuna": "03301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 23,
+        "fields": {
+          "region": 3,
+          "provincia": 8,
+          "nombre": "Alto del Carmen",
+          "codigo_comuna": "03302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 24,
+        "fields": {
+          "region": 3,
+          "provincia": 8,
+          "nombre": "Freirina",
+          "codigo_comuna": "03303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 25,
+        "fields": {
+          "region": 3,
+          "provincia": 8,
+          "nombre": "Huasco",
+          "codigo_comuna": "03304"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 26,
+        "fields": {
+          "region": 4,
+          "provincia": 9,
+          "nombre": "La Serena",
+          "codigo_comuna": "04101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 27,
+        "fields": {
+          "region": 4,
+          "provincia": 9,
+          "nombre": "Coquimbo",
+          "codigo_comuna": "04102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 28,
+        "fields": {
+          "region": 4,
+          "provincia": 9,
+          "nombre": "Andacollo",
+          "codigo_comuna": "04103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 29,
+        "fields": {
+          "region": 4,
+          "provincia": 9,
+          "nombre": "La Higuera",
+          "codigo_comuna": "04104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 30,
+        "fields": {
+          "region": 4,
+          "provincia": 9,
+          "nombre": "Paiguano",
+          "codigo_comuna": "04105"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 31,
+        "fields": {
+          "region": 4,
+          "provincia": 9,
+          "nombre": "Vicuña",
+          "codigo_comuna": "04106"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 32,
+        "fields": {
+          "region": 4,
+          "provincia": 10,
+          "nombre": "Illapel",
+          "codigo_comuna": "04201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 33,
+        "fields": {
+          "region": 4,
+          "provincia": 10,
+          "nombre": "Canela",
+          "codigo_comuna": "04202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 34,
+        "fields": {
+          "region": 4,
+          "provincia": 10,
+          "nombre": "Los Vilos",
+          "codigo_comuna": "04203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 35,
+        "fields": {
+          "region": 4,
+          "provincia": 10,
+          "nombre": "Salamanca",
+          "codigo_comuna": "04204"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 36,
+        "fields": {
+          "region": 4,
+          "provincia": 11,
+          "nombre": "Ovalle",
+          "codigo_comuna": "04301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 37,
+        "fields": {
+          "region": 4,
+          "provincia": 11,
+          "nombre": "Combarbalá",
+          "codigo_comuna": "04302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 38,
+        "fields": {
+          "region": 4,
+          "provincia": 11,
+          "nombre": "Monte Patria",
+          "codigo_comuna": "04303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 39,
+        "fields": {
+          "region": 4,
+          "provincia": 11,
+          "nombre": "Punitaqui",
+          "codigo_comuna": "04304"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 40,
+        "fields": {
+          "region": 4,
+          "provincia": 11,
+          "nombre": "Río Hurtado",
+          "codigo_comuna": "04305"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 41,
+        "fields": {
+          "region": 5,
+          "provincia": 12,
+          "nombre": "Valparaíso",
+          "codigo_comuna": "05101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 42,
+        "fields": {
+          "region": 5,
+          "provincia": 12,
+          "nombre": "Casablanca",
+          "codigo_comuna": "05102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 43,
+        "fields": {
+          "region": 5,
+          "provincia": 12,
+          "nombre": "Concón",
+          "codigo_comuna": "05103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 44,
+        "fields": {
+          "region": 5,
+          "provincia": 12,
+          "nombre": "Juan Fernández",
+          "codigo_comuna": "05104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 45,
+        "fields": {
+          "region": 5,
+          "provincia": 12,
+          "nombre": "Puchuncaví",
+          "codigo_comuna": "05105"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 46,
+        "fields": {
+          "region": 5,
+          "provincia": 12,
+          "nombre": "Quintero",
+          "codigo_comuna": "05107"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 47,
+        "fields": {
+          "region": 5,
+          "provincia": 12,
+          "nombre": "Viña del Mar",
+          "codigo_comuna": "05109"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 48,
+        "fields": {
+          "region": 5,
+          "provincia": 13,
+          "nombre": "Isla de Pascua",
+          "codigo_comuna": "05201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 49,
+        "fields": {
+          "region": 5,
+          "provincia": 14,
+          "nombre": "Los Andes",
+          "codigo_comuna": "05301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 50,
+        "fields": {
+          "region": 5,
+          "provincia": 14,
+          "nombre": "Calle Larga",
+          "codigo_comuna": "05302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 51,
+        "fields": {
+          "region": 5,
+          "provincia": 14,
+          "nombre": "Rinconada",
+          "codigo_comuna": "05303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 52,
+        "fields": {
+          "region": 5,
+          "provincia": 14,
+          "nombre": "San Esteban",
+          "codigo_comuna": "05304"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 53,
+        "fields": {
+          "region": 5,
+          "provincia": 15,
+          "nombre": "La Ligua",
+          "codigo_comuna": "05401"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 54,
+        "fields": {
+          "region": 5,
+          "provincia": 15,
+          "nombre": "Cabildo",
+          "codigo_comuna": "05402"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 55,
+        "fields": {
+          "region": 5,
+          "provincia": 15,
+          "nombre": "Papudo",
+          "codigo_comuna": "05403"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 56,
+        "fields": {
+          "region": 5,
+          "provincia": 15,
+          "nombre": "Petorca",
+          "codigo_comuna": "05404"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 57,
+        "fields": {
+          "region": 5,
+          "provincia": 15,
+          "nombre": "Zapallar",
+          "codigo_comuna": "05405"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 58,
+        "fields": {
+          "region": 5,
+          "provincia": 16,
+          "nombre": "Quillota",
+          "codigo_comuna": "05501"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 59,
+        "fields": {
+          "region": 5,
+          "provincia": 16,
+          "nombre": "Calera",
+          "codigo_comuna": "05502"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 60,
+        "fields": {
+          "region": 5,
+          "provincia": 16,
+          "nombre": "Hijuelas",
+          "codigo_comuna": "05503"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 61,
+        "fields": {
+          "region": 5,
+          "provincia": 16,
+          "nombre": "La Cruz",
+          "codigo_comuna": "05504"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 62,
+        "fields": {
+          "region": 5,
+          "provincia": 16,
+          "nombre": "Nogales",
+          "codigo_comuna": "05506"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 63,
+        "fields": {
+          "region": 5,
+          "provincia": 17,
+          "nombre": "San Antonio",
+          "codigo_comuna": "05601"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 64,
+        "fields": {
+          "region": 5,
+          "provincia": 17,
+          "nombre": "Algarrobo",
+          "codigo_comuna": "05602"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 65,
+        "fields": {
+          "region": 5,
+          "provincia": 17,
+          "nombre": "Cartagena",
+          "codigo_comuna": "05603"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 66,
+        "fields": {
+          "region": 5,
+          "provincia": 17,
+          "nombre": "El Quisco",
+          "codigo_comuna": "05604"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 67,
+        "fields": {
+          "region": 5,
+          "provincia": 17,
+          "nombre": "El Tabo",
+          "codigo_comuna": "05605"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 68,
+        "fields": {
+          "region": 5,
+          "provincia": 17,
+          "nombre": "Santo Domingo",
+          "codigo_comuna": "05606"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 69,
+        "fields": {
+          "region": 5,
+          "provincia": 18,
+          "nombre": "San Felipe",
+          "codigo_comuna": "05701"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 70,
+        "fields": {
+          "region": 5,
+          "provincia": 18,
+          "nombre": "Catemu",
+          "codigo_comuna": "05702"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 71,
+        "fields": {
+          "region": 5,
+          "provincia": 18,
+          "nombre": "Llaillay",
+          "codigo_comuna": "05703"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 72,
+        "fields": {
+          "region": 5,
+          "provincia": 18,
+          "nombre": "Panquehue",
+          "codigo_comuna": "05704"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 73,
+        "fields": {
+          "region": 5,
+          "provincia": 18,
+          "nombre": "Putaendo",
+          "codigo_comuna": "05705"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 74,
+        "fields": {
+          "region": 5,
+          "provincia": 18,
+          "nombre": "Santa María",
+          "codigo_comuna": "05706"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 75,
+        "fields": {
+          "region": 5,
+          "provincia": 19,
+          "nombre": "Quilpué",
+          "codigo_comuna": "05801"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 76,
+        "fields": {
+          "region": 5,
+          "provincia": 19,
+          "nombre": "Limache",
+          "codigo_comuna": "05802"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 77,
+        "fields": {
+          "region": 5,
+          "provincia": 19,
+          "nombre": "Olmué",
+          "codigo_comuna": "05803"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 78,
+        "fields": {
+          "region": 5,
+          "provincia": 19,
+          "nombre": "Villa Alemana",
+          "codigo_comuna": "05804"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 79,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Rancagua",
+          "codigo_comuna": "06101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 80,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Codegua",
+          "codigo_comuna": "06102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 81,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Coinco",
+          "codigo_comuna": "06103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 82,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Coltauco",
+          "codigo_comuna": "06104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 83,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Doñihue",
+          "codigo_comuna": "06105"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 84,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Graneros",
+          "codigo_comuna": "06106"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 85,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Las Cabras",
+          "codigo_comuna": "06107"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 86,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Machalí",
+          "codigo_comuna": "06108"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 87,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Malloa",
+          "codigo_comuna": "06109"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 88,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Mostazal",
+          "codigo_comuna": "06110"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 89,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Olivar",
+          "codigo_comuna": "06111"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 90,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Peumo",
+          "codigo_comuna": "06112"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 91,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Pichidegua",
+          "codigo_comuna": "06113"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 92,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Quinta de Tilcoco",
+          "codigo_comuna": "06114"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 93,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Rengo",
+          "codigo_comuna": "06115"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 94,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "Requínoa",
+          "codigo_comuna": "06116"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 95,
+        "fields": {
+          "region": 6,
+          "provincia": 20,
+          "nombre": "San Vicente",
+          "codigo_comuna": "06117"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 96,
+        "fields": {
+          "region": 6,
+          "provincia": 21,
+          "nombre": "Pichilemu",
+          "codigo_comuna": "06201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 97,
+        "fields": {
+          "region": 6,
+          "provincia": 21,
+          "nombre": "La Estrella",
+          "codigo_comuna": "06202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 98,
+        "fields": {
+          "region": 6,
+          "provincia": 21,
+          "nombre": "Litueche",
+          "codigo_comuna": "06203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 99,
+        "fields": {
+          "region": 6,
+          "provincia": 21,
+          "nombre": "Marchihue",
+          "codigo_comuna": "06204"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 100,
+        "fields": {
+          "region": 6,
+          "provincia": 21,
+          "nombre": "Navidad",
+          "codigo_comuna": "06205"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 101,
+        "fields": {
+          "region": 6,
+          "provincia": 21,
+          "nombre": "Paredones",
+          "codigo_comuna": "06206"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 102,
+        "fields": {
+          "region": 6,
+          "provincia": 22,
+          "nombre": "San Fernando",
+          "codigo_comuna": "06301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 103,
+        "fields": {
+          "region": 6,
+          "provincia": 22,
+          "nombre": "Chépica",
+          "codigo_comuna": "06302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 104,
+        "fields": {
+          "region": 6,
+          "provincia": 22,
+          "nombre": "Chimbarongo",
+          "codigo_comuna": "06303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 105,
+        "fields": {
+          "region": 6,
+          "provincia": 22,
+          "nombre": "Lolol",
+          "codigo_comuna": "06304"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 106,
+        "fields": {
+          "region": 6,
+          "provincia": 22,
+          "nombre": "Nancagua",
+          "codigo_comuna": "06305"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 107,
+        "fields": {
+          "region": 6,
+          "provincia": 22,
+          "nombre": "Palmilla",
+          "codigo_comuna": "06306"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 108,
+        "fields": {
+          "region": 6,
+          "provincia": 22,
+          "nombre": "Peralillo",
+          "codigo_comuna": "06307"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 109,
+        "fields": {
+          "region": 6,
+          "provincia": 22,
+          "nombre": "Placilla",
+          "codigo_comuna": "06308"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 110,
+        "fields": {
+          "region": 6,
+          "provincia": 22,
+          "nombre": "Pumanque",
+          "codigo_comuna": "06309"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 111,
+        "fields": {
+          "region": 6,
+          "provincia": 22,
+          "nombre": "Santa Cruz",
+          "codigo_comuna": "06310"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 112,
+        "fields": {
+          "region": 7,
+          "provincia": 23,
+          "nombre": "Talca",
+          "codigo_comuna": "07101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 113,
+        "fields": {
+          "region": 7,
+          "provincia": 23,
+          "nombre": "Constitución",
+          "codigo_comuna": "07102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 114,
+        "fields": {
+          "region": 7,
+          "provincia": 23,
+          "nombre": "Curepto",
+          "codigo_comuna": "07103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 115,
+        "fields": {
+          "region": 7,
+          "provincia": 23,
+          "nombre": "Empedrado",
+          "codigo_comuna": "07104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 116,
+        "fields": {
+          "region": 7,
+          "provincia": 23,
+          "nombre": "Maule",
+          "codigo_comuna": "07105"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 117,
+        "fields": {
+          "region": 7,
+          "provincia": 23,
+          "nombre": "Pelarco",
+          "codigo_comuna": "07106"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 118,
+        "fields": {
+          "region": 7,
+          "provincia": 23,
+          "nombre": "Pencahue",
+          "codigo_comuna": "07107"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 119,
+        "fields": {
+          "region": 7,
+          "provincia": 23,
+          "nombre": "Río Claro",
+          "codigo_comuna": "07108"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 120,
+        "fields": {
+          "region": 7,
+          "provincia": 23,
+          "nombre": "San Clemente",
+          "codigo_comuna": "07109"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 121,
+        "fields": {
+          "region": 7,
+          "provincia": 23,
+          "nombre": "San Rafael",
+          "codigo_comuna": "07110"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 122,
+        "fields": {
+          "region": 7,
+          "provincia": 24,
+          "nombre": "Cauquenes",
+          "codigo_comuna": "07201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 123,
+        "fields": {
+          "region": 7,
+          "provincia": 24,
+          "nombre": "Chanco",
+          "codigo_comuna": "07202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 124,
+        "fields": {
+          "region": 7,
+          "provincia": 24,
+          "nombre": "Pelluhue",
+          "codigo_comuna": "07203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 125,
+        "fields": {
+          "region": 7,
+          "provincia": 25,
+          "nombre": "Curicó",
+          "codigo_comuna": "07301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 126,
+        "fields": {
+          "region": 7,
+          "provincia": 25,
+          "nombre": "Hualañé",
+          "codigo_comuna": "07302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 127,
+        "fields": {
+          "region": 7,
+          "provincia": 25,
+          "nombre": "Licantén",
+          "codigo_comuna": "07303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 128,
+        "fields": {
+          "region": 7,
+          "provincia": 25,
+          "nombre": "Molina",
+          "codigo_comuna": "07304"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 129,
+        "fields": {
+          "region": 7,
+          "provincia": 25,
+          "nombre": "Rauco",
+          "codigo_comuna": "07305"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 130,
+        "fields": {
+          "region": 7,
+          "provincia": 25,
+          "nombre": "Romeral",
+          "codigo_comuna": "07306"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 131,
+        "fields": {
+          "region": 7,
+          "provincia": 25,
+          "nombre": "Sagrada Familia",
+          "codigo_comuna": "07307"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 132,
+        "fields": {
+          "region": 7,
+          "provincia": 25,
+          "nombre": "Teno",
+          "codigo_comuna": "07308"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 133,
+        "fields": {
+          "region": 7,
+          "provincia": 25,
+          "nombre": "Vichuquén",
+          "codigo_comuna": "07309"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 134,
+        "fields": {
+          "region": 7,
+          "provincia": 26,
+          "nombre": "Linares",
+          "codigo_comuna": "07401"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 135,
+        "fields": {
+          "region": 7,
+          "provincia": 26,
+          "nombre": "Colbún",
+          "codigo_comuna": "07402"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 136,
+        "fields": {
+          "region": 7,
+          "provincia": 26,
+          "nombre": "Longaví",
+          "codigo_comuna": "07403"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 137,
+        "fields": {
+          "region": 7,
+          "provincia": 26,
+          "nombre": "Parral",
+          "codigo_comuna": "07404"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 138,
+        "fields": {
+          "region": 7,
+          "provincia": 26,
+          "nombre": "Retiro",
+          "codigo_comuna": "07405"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 139,
+        "fields": {
+          "region": 7,
+          "provincia": 26,
+          "nombre": "San Javier",
+          "codigo_comuna": "07406"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 140,
+        "fields": {
+          "region": 7,
+          "provincia": 26,
+          "nombre": "Villa Alegre",
+          "codigo_comuna": "07407"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 141,
+        "fields": {
+          "region": 7,
+          "provincia": 26,
+          "nombre": "Yerbas Buenas",
+          "codigo_comuna": "07408"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 142,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Concepción",
+          "codigo_comuna": "08101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 143,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Coronel",
+          "codigo_comuna": "08102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 144,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Chiguayante",
+          "codigo_comuna": "08103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 145,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Florida",
+          "codigo_comuna": "08104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 146,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Hualqui",
+          "codigo_comuna": "08105"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 147,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Lota",
+          "codigo_comuna": "08106"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 148,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Penco",
+          "codigo_comuna": "08107"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 149,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "San Pedro de la Paz",
+          "codigo_comuna": "08108"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 150,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Santa Juana",
+          "codigo_comuna": "08109"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 151,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Talcahuano",
+          "codigo_comuna": "08110"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 152,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Tomé",
+          "codigo_comuna": "08111"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 153,
+        "fields": {
+          "region": 8,
+          "provincia": 27,
+          "nombre": "Hualpén",
+          "codigo_comuna": "08112"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 154,
+        "fields": {
+          "region": 8,
+          "provincia": 28,
+          "nombre": "Lebu",
+          "codigo_comuna": "08201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 155,
+        "fields": {
+          "region": 8,
+          "provincia": 28,
+          "nombre": "Arauco",
+          "codigo_comuna": "08202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 156,
+        "fields": {
+          "region": 8,
+          "provincia": 28,
+          "nombre": "Cañete",
+          "codigo_comuna": "08203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 157,
+        "fields": {
+          "region": 8,
+          "provincia": 28,
+          "nombre": "Contulmo",
+          "codigo_comuna": "08204"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 158,
+        "fields": {
+          "region": 8,
+          "provincia": 28,
+          "nombre": "Curanilahue",
+          "codigo_comuna": "08205"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 159,
+        "fields": {
+          "region": 8,
+          "provincia": 28,
+          "nombre": "Los Alamos",
+          "codigo_comuna": "08206"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 160,
+        "fields": {
+          "region": 8,
+          "provincia": 28,
+          "nombre": "Tirúa",
+          "codigo_comuna": "08207"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 161,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Los Angeles",
+          "codigo_comuna": "08301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 162,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Antuco",
+          "codigo_comuna": "08302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 163,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Cabrero",
+          "codigo_comuna": "08303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 164,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Laja",
+          "codigo_comuna": "08304"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 165,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Mulchén",
+          "codigo_comuna": "08305"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 166,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Nacimiento",
+          "codigo_comuna": "08306"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 167,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Negrete",
+          "codigo_comuna": "08307"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 168,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Quilaco",
+          "codigo_comuna": "08308"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 169,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Quilleco",
+          "codigo_comuna": "08309"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 170,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "San Rosendo",
+          "codigo_comuna": "08310"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 171,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Santa Bárbara",
+          "codigo_comuna": "08311"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 172,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Tucapel",
+          "codigo_comuna": "08312"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 173,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Yumbel",
+          "codigo_comuna": "08313"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 174,
+        "fields": {
+          "region": 8,
+          "provincia": 29,
+          "nombre": "Alto Biobío",
+          "codigo_comuna": "08314"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 175,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Temuco",
+          "codigo_comuna": "09101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 176,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Carahue",
+          "codigo_comuna": "09102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 177,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Cunco",
+          "codigo_comuna": "09103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 178,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Curarrehue",
+          "codigo_comuna": "09104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 179,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Freire",
+          "codigo_comuna": "09105"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 180,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Galvarino",
+          "codigo_comuna": "09106"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 181,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Gorbea",
+          "codigo_comuna": "09107"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 182,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Lautaro",
+          "codigo_comuna": "09108"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 183,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Loncoche",
+          "codigo_comuna": "09109"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 184,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Melipeuco",
+          "codigo_comuna": "09110"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 185,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Nueva Imperial",
+          "codigo_comuna": "09111"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 186,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Padre Las Casas",
+          "codigo_comuna": "09112"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 187,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Perquenco",
+          "codigo_comuna": "09113"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 188,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Pitrufquén",
+          "codigo_comuna": "09114"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 189,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Pucón",
+          "codigo_comuna": "09115"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 190,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Saavedra",
+          "codigo_comuna": "09116"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 191,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Teodoro Schmidt",
+          "codigo_comuna": "09117"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 192,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Toltén",
+          "codigo_comuna": "09118"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 193,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Vilcún",
+          "codigo_comuna": "09119"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 194,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Villarrica",
+          "codigo_comuna": "09120"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 195,
+        "fields": {
+          "region": 9,
+          "provincia": 30,
+          "nombre": "Cholchol",
+          "codigo_comuna": "09121"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 196,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Angol",
+          "codigo_comuna": "09201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 197,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Collipulli",
+          "codigo_comuna": "09202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 198,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Curacautín",
+          "codigo_comuna": "09203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 199,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Ercilla",
+          "codigo_comuna": "09204"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 200,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Lonquimay",
+          "codigo_comuna": "09205"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 201,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Los Sauces",
+          "codigo_comuna": "09206"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 202,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Lumaco",
+          "codigo_comuna": "09207"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 203,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Purén",
+          "codigo_comuna": "09208"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 204,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Renaico",
+          "codigo_comuna": "09209"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 205,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Traiguén",
+          "codigo_comuna": "09210"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 206,
+        "fields": {
+          "region": 9,
+          "provincia": 31,
+          "nombre": "Victoria",
+          "codigo_comuna": "09211"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 207,
+        "fields": {
+          "region": 10,
+          "provincia": 32,
+          "nombre": "Puerto Montt",
+          "codigo_comuna": "10101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 208,
+        "fields": {
+          "region": 10,
+          "provincia": 32,
+          "nombre": "Calbuco",
+          "codigo_comuna": "10102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 209,
+        "fields": {
+          "region": 10,
+          "provincia": 32,
+          "nombre": "Cochamó",
+          "codigo_comuna": "10103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 210,
+        "fields": {
+          "region": 10,
+          "provincia": 32,
+          "nombre": "Fresia",
+          "codigo_comuna": "10104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 211,
+        "fields": {
+          "region": 10,
+          "provincia": 32,
+          "nombre": "Frutillar",
+          "codigo_comuna": "10105"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 212,
+        "fields": {
+          "region": 10,
+          "provincia": 32,
+          "nombre": "Los Muermos",
+          "codigo_comuna": "10106"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 213,
+        "fields": {
+          "region": 10,
+          "provincia": 32,
+          "nombre": "Llanquihue",
+          "codigo_comuna": "10107"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 214,
+        "fields": {
+          "region": 10,
+          "provincia": 32,
+          "nombre": "Maullín",
+          "codigo_comuna": "10108"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 215,
+        "fields": {
+          "region": 10,
+          "provincia": 32,
+          "nombre": "Puerto Varas",
+          "codigo_comuna": "10109"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 216,
+        "fields": {
+          "region": 10,
+          "provincia": 33,
+          "nombre": "Castro",
+          "codigo_comuna": "10201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 217,
+        "fields": {
+          "region": 10,
+          "provincia": 33,
+          "nombre": "Ancud",
+          "codigo_comuna": "10202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 218,
+        "fields": {
+          "region": 10,
+          "provincia": 33,
+          "nombre": "Chonchi",
+          "codigo_comuna": "10203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 219,
+        "fields": {
+          "region": 10,
+          "provincia": 33,
+          "nombre": "Curaco de Vélez",
+          "codigo_comuna": "10204"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 220,
+        "fields": {
+          "region": 10,
+          "provincia": 33,
+          "nombre": "Dalcahue",
+          "codigo_comuna": "10205"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 221,
+        "fields": {
+          "region": 10,
+          "provincia": 33,
+          "nombre": "Puqueldón",
+          "codigo_comuna": "10206"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 222,
+        "fields": {
+          "region": 10,
+          "provincia": 33,
+          "nombre": "Queilén",
+          "codigo_comuna": "10207"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 223,
+        "fields": {
+          "region": 10,
+          "provincia": 33,
+          "nombre": "Quellón",
+          "codigo_comuna": "10208"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 224,
+        "fields": {
+          "region": 10,
+          "provincia": 33,
+          "nombre": "Quemchi",
+          "codigo_comuna": "10209"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 225,
+        "fields": {
+          "region": 10,
+          "provincia": 33,
+          "nombre": "Quinchao",
+          "codigo_comuna": "10210"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 226,
+        "fields": {
+          "region": 10,
+          "provincia": 34,
+          "nombre": "Osorno",
+          "codigo_comuna": "10301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 227,
+        "fields": {
+          "region": 10,
+          "provincia": 34,
+          "nombre": "Puerto Octay",
+          "codigo_comuna": "10302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 228,
+        "fields": {
+          "region": 10,
+          "provincia": 34,
+          "nombre": "Purranque",
+          "codigo_comuna": "10303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 229,
+        "fields": {
+          "region": 10,
+          "provincia": 34,
+          "nombre": "Puyehue",
+          "codigo_comuna": "10304"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 230,
+        "fields": {
+          "region": 10,
+          "provincia": 34,
+          "nombre": "Río Negro",
+          "codigo_comuna": "10305"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 231,
+        "fields": {
+          "region": 10,
+          "provincia": 34,
+          "nombre": "San Juan de la Costa",
+          "codigo_comuna": "10306"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 232,
+        "fields": {
+          "region": 10,
+          "provincia": 34,
+          "nombre": "San Pablo",
+          "codigo_comuna": "10307"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 233,
+        "fields": {
+          "region": 10,
+          "provincia": 35,
+          "nombre": "Chaitén",
+          "codigo_comuna": "10401"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 234,
+        "fields": {
+          "region": 10,
+          "provincia": 35,
+          "nombre": "Futaleufú",
+          "codigo_comuna": "10402"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 235,
+        "fields": {
+          "region": 10,
+          "provincia": 35,
+          "nombre": "Hualaihué",
+          "codigo_comuna": "10403"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 236,
+        "fields": {
+          "region": 10,
+          "provincia": 35,
+          "nombre": "Palena",
+          "codigo_comuna": "10404"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 237,
+        "fields": {
+          "region": 11,
+          "provincia": 36,
+          "nombre": "Coihaique",
+          "codigo_comuna": "11101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 238,
+        "fields": {
+          "region": 11,
+          "provincia": 36,
+          "nombre": "Lago Verde",
+          "codigo_comuna": "11102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 239,
+        "fields": {
+          "region": 11,
+          "provincia": 37,
+          "nombre": "Aisén",
+          "codigo_comuna": "11201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 240,
+        "fields": {
+          "region": 11,
+          "provincia": 37,
+          "nombre": "Cisnes",
+          "codigo_comuna": "11202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 241,
+        "fields": {
+          "region": 11,
+          "provincia": 37,
+          "nombre": "Guaitecas",
+          "codigo_comuna": "11203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 242,
+        "fields": {
+          "region": 11,
+          "provincia": 38,
+          "nombre": "Cochrane",
+          "codigo_comuna": "11301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 243,
+        "fields": {
+          "region": 11,
+          "provincia": 38,
+          "nombre": "O'Higgins",
+          "codigo_comuna": "11302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 244,
+        "fields": {
+          "region": 11,
+          "provincia": 38,
+          "nombre": "Tortel",
+          "codigo_comuna": "11303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 245,
+        "fields": {
+          "region": 11,
+          "provincia": 39,
+          "nombre": "Chile Chico",
+          "codigo_comuna": "11401"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 246,
+        "fields": {
+          "region": 11,
+          "provincia": 39,
+          "nombre": "Río Ibáñez",
+          "codigo_comuna": "11402"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 247,
+        "fields": {
+          "region": 12,
+          "provincia": 40,
+          "nombre": "Punta Arenas",
+          "codigo_comuna": "12101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 248,
+        "fields": {
+          "region": 12,
+          "provincia": 40,
+          "nombre": "Laguna Blanca",
+          "codigo_comuna": "12102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 249,
+        "fields": {
+          "region": 12,
+          "provincia": 40,
+          "nombre": "Río Verde",
+          "codigo_comuna": "12103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 250,
+        "fields": {
+          "region": 12,
+          "provincia": 40,
+          "nombre": "San Gregorio",
+          "codigo_comuna": "12104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 251,
+        "fields": {
+          "region": 12,
+          "provincia": 41,
+          "nombre": "Cabo de Hornos",
+          "codigo_comuna": "12201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 252,
+        "fields": {
+          "region": 12,
+          "provincia": 41,
+          "nombre": "Antártica",
+          "codigo_comuna": "12202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 253,
+        "fields": {
+          "region": 12,
+          "provincia": 42,
+          "nombre": "Porvenir",
+          "codigo_comuna": "12301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 254,
+        "fields": {
+          "region": 12,
+          "provincia": 42,
+          "nombre": "Primavera",
+          "codigo_comuna": "12302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 255,
+        "fields": {
+          "region": 12,
+          "provincia": 42,
+          "nombre": "Timaukel",
+          "codigo_comuna": "12303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 256,
+        "fields": {
+          "region": 12,
+          "provincia": 43,
+          "nombre": "Natales",
+          "codigo_comuna": "12401"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 257,
+        "fields": {
+          "region": 12,
+          "provincia": 43,
+          "nombre": "Torres del Paine",
+          "codigo_comuna": "12402"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 258,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Santiago",
+          "codigo_comuna": "13101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 259,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Cerrillos",
+          "codigo_comuna": "13102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 260,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Cerro Navia",
+          "codigo_comuna": "13103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 261,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Conchalí",
+          "codigo_comuna": "13104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 262,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "El Bosque",
+          "codigo_comuna": "13105"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 263,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Estación Central",
+          "codigo_comuna": "13106"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 264,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Huechuraba",
+          "codigo_comuna": "13107"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 265,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Independencia",
+          "codigo_comuna": "13108"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 266,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "La Cisterna",
+          "codigo_comuna": "13109"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 267,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "La Florida",
+          "codigo_comuna": "13110"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 268,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "La Granja",
+          "codigo_comuna": "13111"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 269,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "La Pintana",
+          "codigo_comuna": "13112"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 270,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "La Reina",
+          "codigo_comuna": "13113"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 271,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Las Condes",
+          "codigo_comuna": "13114"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 272,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Lo Barnechea",
+          "codigo_comuna": "13115"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 273,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Lo Espejo",
+          "codigo_comuna": "13116"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 274,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Lo Prado",
+          "codigo_comuna": "13117"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 275,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Macul",
+          "codigo_comuna": "13118"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 276,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Maipú",
+          "codigo_comuna": "13119"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 277,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Ñuñoa",
+          "codigo_comuna": "13120"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 278,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Pedro Aguirre Cerda",
+          "codigo_comuna": "13121"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 279,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Peñalolén",
+          "codigo_comuna": "13122"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 280,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Providencia",
+          "codigo_comuna": "13123"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 281,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Pudahuel",
+          "codigo_comuna": "13124"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 282,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Quilicura",
+          "codigo_comuna": "13125"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 283,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Quinta Normal",
+          "codigo_comuna": "13126"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 284,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Recoleta",
+          "codigo_comuna": "13127"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 285,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Renca",
+          "codigo_comuna": "13128"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 286,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "San Joaquín",
+          "codigo_comuna": "13129"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 287,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "San Miguel",
+          "codigo_comuna": "13130"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 288,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "San Ramón",
+          "codigo_comuna": "13131"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 289,
+        "fields": {
+          "region": 13,
+          "provincia": 44,
+          "nombre": "Vitacura",
+          "codigo_comuna": "13132"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 290,
+        "fields": {
+          "region": 13,
+          "provincia": 45,
+          "nombre": "Puente Alto",
+          "codigo_comuna": "13201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 291,
+        "fields": {
+          "region": 13,
+          "provincia": 45,
+          "nombre": "Pirque",
+          "codigo_comuna": "13202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 292,
+        "fields": {
+          "region": 13,
+          "provincia": 45,
+          "nombre": "San José de Maipo",
+          "codigo_comuna": "13203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 293,
+        "fields": {
+          "region": 13,
+          "provincia": 46,
+          "nombre": "Colina",
+          "codigo_comuna": "13301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 294,
+        "fields": {
+          "region": 13,
+          "provincia": 46,
+          "nombre": "Lampa",
+          "codigo_comuna": "13302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 295,
+        "fields": {
+          "region": 13,
+          "provincia": 46,
+          "nombre": "Tiltil",
+          "codigo_comuna": "13303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 296,
+        "fields": {
+          "region": 13,
+          "provincia": 47,
+          "nombre": "San Bernardo",
+          "codigo_comuna": "13401"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 297,
+        "fields": {
+          "region": 13,
+          "provincia": 47,
+          "nombre": "Buin",
+          "codigo_comuna": "13402"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 298,
+        "fields": {
+          "region": 13,
+          "provincia": 47,
+          "nombre": "Calera de Tango",
+          "codigo_comuna": "13403"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 299,
+        "fields": {
+          "region": 13,
+          "provincia": 47,
+          "nombre": "Paine",
+          "codigo_comuna": "13404"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 300,
+        "fields": {
+          "region": 13,
+          "provincia": 48,
+          "nombre": "Melipilla",
+          "codigo_comuna": "13501"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 301,
+        "fields": {
+          "region": 13,
+          "provincia": 48,
+          "nombre": "Alhué",
+          "codigo_comuna": "13502"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 302,
+        "fields": {
+          "region": 13,
+          "provincia": 48,
+          "nombre": "Curacaví",
+          "codigo_comuna": "13503"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 303,
+        "fields": {
+          "region": 13,
+          "provincia": 48,
+          "nombre": "María Pinto",
+          "codigo_comuna": "13504"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 304,
+        "fields": {
+          "region": 13,
+          "provincia": 48,
+          "nombre": "San Pedro",
+          "codigo_comuna": "13505"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 305,
+        "fields": {
+          "region": 13,
+          "provincia": 49,
+          "nombre": "Talagante",
+          "codigo_comuna": "13601"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 306,
+        "fields": {
+          "region": 13,
+          "provincia": 49,
+          "nombre": "El Monte",
+          "codigo_comuna": "13602"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 307,
+        "fields": {
+          "region": 13,
+          "provincia": 49,
+          "nombre": "Isla de Maipo",
+          "codigo_comuna": "13603"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 308,
+        "fields": {
+          "region": 13,
+          "provincia": 49,
+          "nombre": "Padre Hurtado",
+          "codigo_comuna": "13604"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 309,
+        "fields": {
+          "region": 13,
+          "provincia": 49,
+          "nombre": "Peñaflor",
+          "codigo_comuna": "13605"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 310,
+        "fields": {
+          "region": 14,
+          "provincia": 50,
+          "nombre": "Valdivia",
+          "codigo_comuna": "14101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 311,
+        "fields": {
+          "region": 14,
+          "provincia": 50,
+          "nombre": "Corral",
+          "codigo_comuna": "14102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 312,
+        "fields": {
+          "region": 14,
+          "provincia": 50,
+          "nombre": "Lanco",
+          "codigo_comuna": "14103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 313,
+        "fields": {
+          "region": 14,
+          "provincia": 50,
+          "nombre": "Los Lagos",
+          "codigo_comuna": "14104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 314,
+        "fields": {
+          "region": 14,
+          "provincia": 50,
+          "nombre": "Máfil",
+          "codigo_comuna": "14105"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 315,
+        "fields": {
+          "region": 14,
+          "provincia": 50,
+          "nombre": "Mariquina",
+          "codigo_comuna": "14106"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 316,
+        "fields": {
+          "region": 14,
+          "provincia": 50,
+          "nombre": "Paillaco",
+          "codigo_comuna": "14107"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 317,
+        "fields": {
+          "region": 14,
+          "provincia": 50,
+          "nombre": "Panguipulli",
+          "codigo_comuna": "14108"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 318,
+        "fields": {
+          "region": 14,
+          "provincia": 51,
+          "nombre": "La Unión",
+          "codigo_comuna": "14201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 319,
+        "fields": {
+          "region": 14,
+          "provincia": 51,
+          "nombre": "Futrono",
+          "codigo_comuna": "14202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 320,
+        "fields": {
+          "region": 14,
+          "provincia": 51,
+          "nombre": "Lago Ranco",
+          "codigo_comuna": "14203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 321,
+        "fields": {
+          "region": 14,
+          "provincia": 51,
+          "nombre": "Río Bueno",
+          "codigo_comuna": "14204"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 322,
+        "fields": {
+          "region": 15,
+          "provincia": 52,
+          "nombre": "Arica",
+          "codigo_comuna": "15101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 323,
+        "fields": {
+          "region": 15,
+          "provincia": 52,
+          "nombre": "Camarones",
+          "codigo_comuna": "15102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 324,
+        "fields": {
+          "region": 15,
+          "provincia": 53,
+          "nombre": "Putre",
+          "codigo_comuna": "15201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 325,
+        "fields": {
+          "region": 15,
+          "provincia": 53,
+          "nombre": "General Lagos",
+          "codigo_comuna": "15202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 326,
+        "fields": {
+          "region": 16,
+          "provincia": 54,
+          "nombre": "Chillán",
+          "codigo_comuna": "16101"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 327,
+        "fields": {
+          "region": 16,
+          "provincia": 54,
+          "nombre": "Bulnes",
+          "codigo_comuna": "16102"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 328,
+        "fields": {
+          "region": 16,
+          "provincia": 54,
+          "nombre": "Chillán Viejo",
+          "codigo_comuna": "16103"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 329,
+        "fields": {
+          "region": 16,
+          "provincia": 54,
+          "nombre": "El Carmen",
+          "codigo_comuna": "16104"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 330,
+        "fields": {
+          "region": 16,
+          "provincia": 54,
+          "nombre": "Pemuco",
+          "codigo_comuna": "16105"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 331,
+        "fields": {
+          "region": 16,
+          "provincia": 54,
+          "nombre": "Pinto",
+          "codigo_comuna": "16106"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 332,
+        "fields": {
+          "region": 16,
+          "provincia": 54,
+          "nombre": "Quillón",
+          "codigo_comuna": "16107"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 333,
+        "fields": {
+          "region": 16,
+          "provincia": 54,
+          "nombre": "San Ignacio",
+          "codigo_comuna": "16108"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 334,
+        "fields": {
+          "region": 16,
+          "provincia": 54,
+          "nombre": "Yungay",
+          "codigo_comuna": "16109"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 335,
+        "fields": {
+          "region": 16,
+          "provincia": 55,
+          "nombre": "Quirihue",
+          "codigo_comuna": "16201"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 336,
+        "fields": {
+          "region": 16,
+          "provincia": 55,
+          "nombre": "Cobquecura",
+          "codigo_comuna": "16202"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 337,
+        "fields": {
+          "region": 16,
+          "provincia": 55,
+          "nombre": "Coelemu",
+          "codigo_comuna": "16203"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 338,
+        "fields": {
+          "region": 16,
+          "provincia": 55,
+          "nombre": "Ninhue",
+          "codigo_comuna": "16204"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 339,
+        "fields": {
+          "region": 16,
+          "provincia": 55,
+          "nombre": "Portezuelo",
+          "codigo_comuna": "16205"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 340,
+        "fields": {
+          "region": 16,
+          "provincia": 55,
+          "nombre": "Ranquil",
+          "codigo_comuna": "16206"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 341,
+        "fields": {
+          "region": 16,
+          "provincia": 55,
+          "nombre": "Treguaco",
+          "codigo_comuna": "16207"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 342,
+        "fields": {
+          "region": 16,
+          "provincia": 56,
+          "nombre": "San Carlos",
+          "codigo_comuna": "16301"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 343,
+        "fields": {
+          "region": 16,
+          "provincia": 56,
+          "nombre": "Coihueco",
+          "codigo_comuna": "16302"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 344,
+        "fields": {
+          "region": 16,
+          "provincia": 56,
+          "nombre": "Ñiquén",
+          "codigo_comuna": "16303"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 345,
+        "fields": {
+          "region": 16,
+          "provincia": 56,
+          "nombre": "San Fabián",
+          "codigo_comuna": "16304"
+        }
+      },
+      {
+        "model": "server.Comuna",
+        "pk": 346,
+        "fields": {
+          "region": 16,
+          "provincia": 56,
+          "nombre": "San Nicolás",
+          "codigo_comuna": "16305"
+        }
+      }
+]
