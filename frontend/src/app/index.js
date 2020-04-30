@@ -52,6 +52,10 @@ class App extends React.Component {
                   component={asyncComponent(() => import('./routes/Home'))} />
                 <Route exact path={`${match.url}/listado-proceso`}
                   component={asyncComponent(() => import('./routes/ListadoProceso'))} />
+<<<<<<< HEAD
+=======
+
+>>>>>>> d56410d9834eb8a628c81a1a969e12d23d174013
                 <Route component={asyncComponent(() => import('components/Error404'))} />
               </Switch>
             </div>

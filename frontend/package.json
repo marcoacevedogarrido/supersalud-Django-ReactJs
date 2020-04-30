@@ -67,7 +67,10 @@
     "react-icons": "^3.7.0",
     "react-intl": "^2.9.0",
     "react-joyride": "^2.0.5",
+<<<<<<< HEAD
     "react-jsonschema-form": "^1.8.1",
+=======
+>>>>>>> d56410d9834eb8a628c81a1a969e12d23d174013
     "react-jvectormap": "^0.0.12",
     "react-loadable": "^5.5.0",
     "react-modal": "^3.11.1",
